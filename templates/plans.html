@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo | Rejani ko'rish</title>
+</head>
+<body>
+<h1>Rejalar</h1>
+
+{% for plan in plans %}
+    <p>{{ forloop.counter }}
+        <a href="/plan/{{ plan.id }}">{{ plan.sarlavha }}</a>
+    </p>
+{% endfor %}
+
+<h3>Bajarilmagan rejalar</h3>
+{% for plan in bajarilmaga %}
+    <p>{{ plan.sarlavha }} — {{ plan.sana }}</p>
+{% empty %}
+    <p>Hamma reja bajarilgan 🎉</p>
+{% endfor %}
+
+</body>
+</html>

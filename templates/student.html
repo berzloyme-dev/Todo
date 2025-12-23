@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo | studentlarni ko'rish </title>
+</head>
+<body>
+<h1>Studentlar</h1>
+     {% for student in students %}
+     <p>
+         {{ forloop.counter }}
+
+     <a href="/student/{{ student.id }}">
+         {{ student.ism }}
+     </a>
+         {% endfor %}
+</p>
+ <h2>3-kurs talabalari</h2>
+{% for student in kursi %}
+    <p>{{ student.ism }} — {{ student.kurs }}</p>
+{% empty %}
+    <p>3-kurs talabalari yo‘q</p>
+{% endfor %}
+
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo | ochirish</title>
+</head>
+<body>
+    <h1>Rejani ochirish</h1>
+    <p>
+        <b>{{plan.sarlavha}}</b>o'chirmoqchimisiz?
+        <br>
+    </p>
+
+    <div class="actions">
+        <a href="/plans/">
+            <button class="cancel">Bekor qilish</button>
+        </a>
+
+        <a href="/plans/{{plan.id}}/delete/">
+            <button class="delete">O'chirish</button>
+        </a>
+    </div>
+</body>
+</html>
