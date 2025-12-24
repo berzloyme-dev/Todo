@@ -20,5 +20,14 @@
     <p>Hamma reja bajarilgan 🎉</p>
 {% endfor %}
 
+{% for plan in plans %}
+    <p>
+        {{ forloop.counter }}
+        <a href="/plan/{{ plan.id }}">{{ plan.sarlavha }}</a>
+        |
+        <a href="/plans/delete/{{ plan.id }}">O‘chirish</a>
+    </p>
+{% endfor %}
+
 </body>
 </html>

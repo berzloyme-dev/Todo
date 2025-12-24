@@ -24,7 +24,7 @@ urlpatterns = [
     path('', home_view),
     path('students/',students_view),
 
-    path('plans/',plans_view),
-    path('plans/<int:plan_id>/delete/',plans_delete_view,)
+    path('plans/', plans_view),
+    path('plans/delete/<int:plan_id>/', plans_delete_view),
 
 ]
